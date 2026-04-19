@@ -1,0 +1,27 @@
+html { scroll-behavior: smooth; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0F172A 0%, #1e293b 40%, #0F172A 100%);
+        }
+        .glow-emerald {
+            box-shadow: 0 0 60px rgba(52, 211, 153, 0.15), 0 0 120px rgba(52, 211, 153, 0.05);
+        }
+        .glow-dot {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+        .card-hover {
+            transition: transform 300ms ease, box-shadow 300ms ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        .nav-blur {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
