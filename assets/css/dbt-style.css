@@ -82,9 +82,9 @@
   }
 
   .ci-btn {
-    width: 28px;
-    height: 28px;
-    border-radius: 7px;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
     border: 1px solid var(--border);
     background: var(--card);
     color: var(--accent);
@@ -92,7 +92,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    font-size: 11px;
+    font-size: 15px;
     transition: all 0.2s ease;
     position: relative;
     text-decoration: none;
@@ -139,7 +139,7 @@
     border-top: 1px solid var(--accent);
   }
 
-  .ci-tooltip.show {
+  .ci-btn:hover .ci-tooltip, .ci-tooltip.show {
     opacity: 1;
     visibility: visible;
     transform: translateX(-50%) translateY(0);
@@ -255,7 +255,7 @@
     height: 100vh;
     background: var(--bg2);
     border-left: 1px solid var(--border);
-    z-index: 200;
+    z-index: 2000;
     padding: 70px 24px 24px;
     overflow-y: auto;
     transition: right 0.4s cubic-bezier(0.22, 1, 0.36, 1);
@@ -289,7 +289,7 @@
     position: fixed;
     inset: 0;
     background: rgba(0,0,0,0.5);
-    z-index: 150;
+    z-index: 1500;
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s;
