@@ -1,0 +1,132 @@
+:root {
+  --gh-bg: rgba(12, 14, 18, 0.8);
+  --gh-card: #181c24;
+  --gh-border: #2a2f3c;
+  --gh-fg: #e8e6e1;
+  --gh-accent: #34d399;
+  --gh-accent-dim: rgba(52,211,153,0.12);
+  --gh-green: #4ae88a;
+  --gh-bg2: #12151b;
+}
+
+.global-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: var(--gh-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  height: 64px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+.header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--gh-fg);
+}
+.brand-logo {
+  width: 32px; height: 32px;
+  background: var(--gh-green);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0c0e12;
+}
+.brand-text {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+.header-contact {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.contact-icons {
+  display: flex;
+  gap: 8px;
+  position: relative;
+}
+.ci-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid var(--gh-border);
+  background: var(--gh-card);
+  color: var(--gh-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.2s ease;
+  position: relative;
+  text-decoration: none;
+}
+.ci-btn:hover {
+  background: var(--gh-accent-dim);
+  border-color: var(--gh-accent);
+  transform: translateY(-1px);
+}
+.ci-tooltip {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-4px);
+  background: var(--gh-bg2);
+  border: 1px solid var(--gh-accent);
+  color: var(--gh-accent);
+  padding: 6px 12px;
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  z-index: 50;
+}
+.ci-tooltip::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 8px;
+  height: 8px;
+  background: var(--gh-bg2);
+  border-left: 1px solid var(--gh-accent);
+  border-top: 1px solid var(--gh-accent);
+}
+.ci-btn:hover .ci-tooltip, .ci-tooltip.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+.toc-toggle {
+  background: var(--gh-card);
+  border: 1px solid var(--gh-border);
+  color: #a09d96;
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.25s;
+}
+.toc-toggle:hover { border-color: var(--gh-accent); color: var(--gh-accent); }
